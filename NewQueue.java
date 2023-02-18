@@ -1,4 +1,4 @@
-
+//LUIS DURÁN FLORES - 177406
 public class NewQueue {
 
 	char[] queue;
@@ -32,6 +32,4 @@ public class NewQueue {
 			tail++;
 		}
 	}
-	
-	
 }
