@@ -5,20 +5,22 @@ public class NewStack {
 	int top;
 	int max;
 	
-	public NewStack(char[] stack) {
-		this.stack = stack;
+	public NewStack(int stackSize) {
+		this.stack = new char[stackSize];
+		top = 0;
 		max = stack.length;
 	}
 	
-	public void pop() {
-		top = stack.length;
+	public char pop() {
+		char eliminado = 0;
 			if(top == 0) {
 				System.out.println("Stack is empty");
 				} else {
-					System.out.println(stack[(top-1)]);
+					eliminado = stack[top-1];
 					stack[(top-1)] = 0;
 				    top--;
 				}	
+			return eliminado;
 	}
 	
 	public void push(char valor) {
@@ -26,8 +28,7 @@ public class NewStack {
 			System.out.println("Stack is full");
 		} else {
 			stack[top] = valor;
+			top++;
 		}
 	}
-	
-	
 }
